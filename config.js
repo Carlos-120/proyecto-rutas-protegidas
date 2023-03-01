@@ -5,20 +5,20 @@ const configs = {
         port: process.env.PORT || 9000,
         host: process.env.HOST || 'http://localhost:9000',
         nodeEnv: process.env.NODE_ENV || 'development',
-        jwtSecret: process.env.JWT_SECRET 
+        jwtSecret: process.env.JWT_SECRET
     },
     db: {
-        development:{
+        development: {
             dialect: 'postgres',
             host: 'localhost',
             port: 5432,
             username: 'postgres',
-            password: 'root',
-            database: 'chat-db',
+            password: '220122',
+            database: 'chat',
             define: {
                 timestamps: true, //? Nos obliga a que todas las tablas tengan la propiedad createdAt y upadtedAt
                 underscored: true,
-                underscoredAll: true 
+                underscoredAll: true
             }
         },
         production: {
@@ -31,7 +31,7 @@ const configs = {
             define: {
                 timestamps: true, //? Nos obliga a que todas las tablas tengan la propiedad createdAt y upadtedAt
                 underscored: true,
-                underscoredAll: true 
+                underscoredAll: true
             },
             dialectOptions: {
                 ssl: {
@@ -50,7 +50,7 @@ const configs = {
             define: {
                 timestamps: true, //? Nos obliga a que todas las tablas tengan la propiedad createdAt y upadtedAt
                 underscored: true,
-                underscoredAll: true 
+                underscoredAll: true
             }
         }
     }
